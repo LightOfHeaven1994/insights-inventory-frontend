@@ -7621,7 +7621,7 @@ the debounced term to initSearchQuery to avoid unnecessary server calls.</li>
         <p class="tag-source">
             <a href="components_filters_useGroupFilter.js.html" class="button">View Source</a>
             <span>
-                <a href="components_filters_useGroupFilter.js.html">components/filters/useGroupFilter.js</a>, <a href="components_filters_useGroupFilter.js.html#line82">line 82</a>
+                <a href="components_filters_useGroupFilter.js.html">components/filters/useGroupFilter.js</a>, <a href="components_filters_useGroupFilter.js.html#line85">line 85</a>
             </span>
         </p>
     
@@ -7658,7 +7658,10 @@ result.setSearchQuery {function(string): void} - Debounced setter for the remote
 result.fetchNextPage {function(): void} - Load the next page when available.
 result.hasNextPage {boolean} - Whether there is another page to load.
 result.isFetchingNextPage {boolean} - True while the next page is loading.
-result.remoteSearchEnabled {boolean} - True when server-side search should be used (&gt; 2 pages total).</p></div>
+result.remoteSearchEnabled {boolean} - True when server-side search should be used (&gt; 2 pages total).
+result.isRemoteSearching {boolean} - True while a remote search fetch is in flight for the debounced term.
+result.isSearchDebouncing {boolean} - True while the visible search term has not yet been debounced.
+result.isLoading {boolean} - True during initial load, debounce, or remote search fetch.</p></div>
     
     
     <div class='column is-5 has-text-left'>
